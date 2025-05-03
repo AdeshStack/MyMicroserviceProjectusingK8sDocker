@@ -1,4 +1,4 @@
-package com.adesh.ProductService.model;
+package com.adesh.Order_Service.model;
 
 
 import lombok.Builder;

@@ -1,5 +1,6 @@
-package com.adesh.PaymentService.model;
+package com.adesh.Order_Service.external.reponse;
 
+import com.adesh.Order_Service.model.PaymentMode;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
