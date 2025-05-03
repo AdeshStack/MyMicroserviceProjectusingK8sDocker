@@ -1,4 +1,4 @@
-package com.adesh.Order_Service.model;
+package com.adesh.PaymentService.model;
 
 public enum PaymentMode {
     CASH,
