@@ -43,6 +43,16 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-gateway</artifactId>
 		</dependency>
+<!--&lt;!&ndash;  spring security and okta&ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.boot</groupId>-->
+<!--			<artifactId>spring-boot-starter-security</artifactId>-->
+<!--		</dependency>-->
+<!--		<dependency>-->
+<!--			<groupId>com.okta.spring</groupId>-->
+<!--			<artifactId>okta-spring-boot-starter</artifactId>-->
+<!--			<version>3.0.7</version>-->
+<!--		</dependency>-->
 
 		<!-- Eureka Discovery Client (If Using Service Discovery) -->
 		<dependency>
@@ -62,6 +72,13 @@
 			<artifactId>spring-cloud-starter-circuitbreaker-reactor-resilience4j</artifactId>
 		</dependency>
 
+<!--		redis reactive-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis-reactive</artifactId>
+		</dependency>
+
+
 		<!-- Actuator (For Monitoring & Debugging) -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -76,6 +93,20 @@
 		<dependency>
 			<groupId>io.zipkin.reporter2</groupId>
 			<artifactId>zipkin-reporter-brave</artifactId>
+		</dependency>
+<!--	Circuit Breaker-->
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-circuitbreaker-resilience4j</artifactId>
+		</dependency>
+
+<!--		Lombok-->
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
 		</dependency>
 
 		<!-- Testing Dependencies -->
@@ -111,5 +142,8 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
+
+
+
+
