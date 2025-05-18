@@ -6,7 +6,7 @@ spring:
     name: API-GATEWAY
 
   config:
-    import: configserver:http://localhost:9296
+    import: configserver:http://${CONFIG_SERVER_URL:localhost}:9296
 
   cloud:
     gateway:
@@ -53,13 +53,33 @@ spring:
                 redis-rate-limiter.replenishRate: 1
                 redis-rate-limiter.burstCapacity: 1
 
-#okta:
-#  oauth2:
-#    issuer: https://dev-35639660.okta.com/oauth2/default
-#    audience: api://default
-#    client-id: 0oaonk29d1lrYFm2k5d7
-#    client-secret: Y8JpkuEZjovvHN_D4JK5u3RagM0p7drklbFS_xHfwusHvr5Ivn0l_NCdD1DFdaKJ
-#    scopes: openid, profile, email, offline_access
-
-
-
+#  security:
+#    oauth2:
+#      client:
+#        registration:
+#          auth0:
+#            authorization-uri: https://dev-75iqf6oxavy2f1ea.us.auth0.com/authorize
+#            client-id: hjhxyeZXw0x9glheeh21Ib5WFCHLQC1H
+#            client-secret: -O2FkwURemH7HHRQ2_FVvkbr7gI-pzESiIJ_4eSA6b6smz52r1ZrZTiG2moblZrX
+#            scope: openid,email,profile,offline_access,Customer,Admin
+#            authorization-grant-type: authorization_code
+#            redirect-uri: "{baseUrl}/login/oauth2/code/auth0"
+#        provider:
+#          auth0:
+#            issue-uri: https://dev-75iqf6oxavy2f1ea.us.auth0.com/   #domain
+#            jwk-set-uri: https://dev-75iqf6oxavy2f1ea.us.auth0.com/well-known/jwks.json
+#
+#auth0:
+#  audience: https://dev-75iqf6oxavy2f1ea.us.auth0.com/api/v2
+##okta:
+##  oauth2:
+##    issuer: https://dev-35639660.okta.com/oauth2/default
+##    audience: api://default
+##    client-id: 0oaonk29d1lrYFm2k5d7
+##    client-secret: Y8JpkuEZjovvHN_D4JK5u3RagM0p7drklbFS_xHfwusHvr5Ivn0l_NCdD1DFdaKJ
+##    scopes: openid, profile, email, offline_access
+#
+#
+#
+#
+#
